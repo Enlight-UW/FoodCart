@@ -10,6 +10,10 @@ package club.enlight.foodtruck.data.model;
 public class Schedule {
 
     // TODO: implement constructor
+    public Schedule(){
+
+
+    }
 
     // TODO: implement setter and getter functions
     public int getScheduleByDay(){

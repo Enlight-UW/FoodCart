@@ -11,6 +11,16 @@ public class FoodTruck implements Serializable {
     private Schedule schedule;
     private boolean acceptsCreditCard;
 
+
+    public FoodTruck(){
+        name = "Default Name";
+        id = 123456;
+        menu = new Menu();
+        schedule = new Schedule();
+        acceptsCreditCard = false;
+    }
+
+
     public FoodTruck(String name){
 
     }
