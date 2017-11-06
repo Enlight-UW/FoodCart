@@ -12,4 +12,12 @@ public class Time {
         this.hour = hour;
         this.minute = minute;
     }
+
+    public int getHour(){
+        return hour;
+    }
+
+    public int getMinute() {
+        return minute;
+    }
 }
