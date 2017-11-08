@@ -11,7 +11,10 @@ public class FoodTruck implements Serializable {
     private Schedule schedule;
     private boolean acceptsCreditCard;
 
-
+    /**
+     * Test constructor
+     *
+     */
     public FoodTruck(){
         name = "Default Name";
         id = 123456;
@@ -20,12 +23,45 @@ public class FoodTruck implements Serializable {
         acceptsCreditCard = false;
     }
 
-
-    public FoodTruck(String name){
-
+    public FoodTruck(int id){
+        this.id = id;
+        name = "Default Name";
+        menu = new Menu();
+        schedule = new Schedule();
+        acceptsCreditCard = false;
     }
 
     // TODO: Implement setter and getter functions
-    // TODO: Implement comparable interface?
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    public int getId(){
+        return this.id;
+    }
+
+    public void setMenu(Menu menu) {
+        this.menu = menu;
+    }
+
+    public Schedule getSchedule() {
+        return schedule;
+    }
+
+    public void setSchedule(Schedule schedule) {
+        this.schedule = schedule;
+    }
+
+    public boolean isAcceptsCreditCard() {
+        return acceptsCreditCard;
+    }
+
+    public void setAcceptsCreditCard(boolean acceptsCreditCard) {
+        this.acceptsCreditCard = acceptsCreditCard;
+    }
+// TODO: Implement comparable interface?
 
 }
