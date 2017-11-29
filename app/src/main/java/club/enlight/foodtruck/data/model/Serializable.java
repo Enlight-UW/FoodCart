@@ -7,5 +7,5 @@ package club.enlight.foodtruck.data.model;
 
 // Define functions to serialize data to be stored in database
 public interface Serializable {
-
+     public String toJSON();
 }
