@@ -4,7 +4,7 @@ package club.enlight.foodtruck.data.model;
  * Created by jzmai on 10/17/17.
  */
 
-public class FoodTruck implements Serializable {
+public class FoodTruck {
     private String name;                // Display Name
     private int id;                     // Unique ID number
     private Menu menu;
@@ -35,7 +35,9 @@ public class FoodTruck implements Serializable {
     public void setName(String name) {
         this.name = name;
     }
-
+    public String getName() {
+        return name;
+    }
     public void setId(int id) {
         this.id = id;
     }
@@ -45,6 +47,9 @@ public class FoodTruck implements Serializable {
 
     public void setMenu(Menu menu) {
         this.menu = menu;
+    }
+    public Menu getMenu(){
+        return menu;
     }
 
     public Schedule getSchedule() {

@@ -13,6 +13,11 @@ public class Menu {
 
     }
 
+    // TODO: inverts toString() function;
+    public Menu(String menu){
+
+    }
+
     /**
      * Return all menu items
      *
@@ -36,6 +41,11 @@ public class Menu {
         return null;
     }
 
+
+    // TODO: implement toString();
+    public String toString(){
+        return "";
+    }
 
 
 
