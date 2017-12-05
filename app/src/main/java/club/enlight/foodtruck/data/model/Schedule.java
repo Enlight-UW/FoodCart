@@ -13,6 +13,19 @@ public class Schedule implements Serializable {
 
     //TODO: create schedule from string. Should reverse toString
     public Schedule(String schedule){
+        String[] schedules = schedule.split(";");
+        String[] openings = schedules[0].split(",");
+        String[] closings = schedules[1].split(",");
+
+        openingTime = new Time[7];
+        closingTime = new Time[7];
+
+        for(int i = 0; i < openingTime.length; i++){
+            openingTime[i] = new Time(openings[i]);
+        }
+        for(int i = 0; i < closingTime.length; i++){
+            closingTime[i] = new Time(closings[i]);
+        }
 
     }
 
@@ -20,8 +33,8 @@ public class Schedule implements Serializable {
         openingTime = new Time[7];
         closingTime = new Time[7];
         for(int i = 0; i < 7; i++) {
-            openingTime[i] = null;
-            closingTime[i] = null;
+            openingTime[i] = new Time("0000");
+            closingTime[i] = new Time("0000");
         }
     }
 
@@ -51,7 +64,16 @@ public class Schedule implements Serializable {
     //TODO: implement toString function for storing in DB
     @Override
     public String toString(){
-        return "";
+        String str = "";
+        for(int i = 0; i < openingTime.length; i++)
+            str += openingTime[i].toString() + ",";
+
+        str +=";";
+        for(int i = 0; i < closingTime.length; i++)
+            str+= closingTime[i].toString() + ",";
+
+
+        return str;
     }
 }
 
