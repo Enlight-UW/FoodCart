@@ -1,14 +1,19 @@
 package club.enlight.foodtruck.data.model;
 
+import java.util.ArrayList;
+
 /**
  * Created by jzmai on 10/17/17.
  */
 
 public class FoodTruck {
+    public final double id;                     // Unique ID number
+
     private String name;                // Display Name
-    private int id;                     // Unique ID number
-    private Menu menu;
+    private ArrayList<MenuItem> menu;
     private Schedule schedule;
+    private double Latitude;
+    private double Longitude;
     private boolean acceptsCreditCard;
 
     /**
@@ -18,7 +23,7 @@ public class FoodTruck {
     public FoodTruck(){
         name = "Default Name";
         id = 123456;
-        menu = new Menu();
+        menu = new ArrayList<MenuItem>();
         schedule = new Schedule();
         acceptsCreditCard = false;
     }
@@ -26,7 +31,7 @@ public class FoodTruck {
     public FoodTruck(int id){
         this.id = id;
         name = "Default Name";
-        menu = new Menu();
+        menu = new ArrayList<MenuItem>();
         schedule = new Schedule();
         acceptsCreditCard = false;
     }
@@ -38,17 +43,11 @@ public class FoodTruck {
     public String getName() {
         return name;
     }
-    public void setId(int id) {
-        this.id = id;
-    }
-    public int getId(){
-        return this.id;
-    }
 
-    public void setMenu(Menu menu) {
+    public void setMenu(ArrayList<MenuItem> menu) {
         this.menu = menu;
     }
-    public Menu getMenu(){
+    public ArrayList<MenuItem> getMenu(){
         return menu;
     }
 
@@ -67,6 +66,23 @@ public class FoodTruck {
     public void setAcceptsCreditCard(boolean acceptsCreditCard) {
         this.acceptsCreditCard = acceptsCreditCard;
     }
-// TODO: Implement comparable interface?
+
+    public double getLatitude() {
+        return Latitude;
+    }
+
+    public void setLatitude(double latitude) {
+        Latitude = latitude;
+    }
+
+    public double getLongitude() {
+        return Longitude;
+    }
+
+    public void setLongitude(double longitude) {
+        Longitude = longitude;
+    }
+
+    // TODO: Implement comparable interface?
 
 }
