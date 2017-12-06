@@ -24,6 +24,15 @@
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:text="@string/title_home" />
 
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="24dp"
+            android:onClick="goToFoodTruck"
+            android:text="@string/title_activity_food_truck"
+            android:visibility="visible" />
+
     </FrameLayout>
 
     <android.support.design.widget.BottomNavigationView
