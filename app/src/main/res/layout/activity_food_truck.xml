@@ -6,6 +6,32 @@
     android:layout_height="match_parent"
     tools:context="club.enlight.foodtruck.FoodTruckActivity">
 
+    <Button
+        android:id="@+id/makeCanvas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="24dp"
+        android:onClick="goToCanvas"
+        android:text="Draw!"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/imageDisplay"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:id="@+id/imageGallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+    </HorizontalScrollView>
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="326dp"

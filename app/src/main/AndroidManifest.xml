@@ -45,7 +45,23 @@
                 android:value="club.enlight.foodtruck.MainActivity" />
         </activity>
         <activity android:name=".AddFoodTruckActivity" />
-        <activity android:name=".FoodTruckActivity"></activity>
+        <activity android:name=".FoodTruckActivity"
+            android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/plain"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="club.enlight.foodtruck.MainActivity" />
+        </activity>
+        <activity android:name=".CanvasActivity"
+            android:parentActivityName=".FoodTruckActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".FoodTruckActivity" />
+        </activity>
     </application>
 
 </manifest>
