@@ -25,7 +25,6 @@ public class DbHelper extends SQLiteOpenHelper {
 
     public static final double LAT_LONG_OFFSET = 0;
 
-
     public static final String DATABASE_NAME = "MyDBName.db";
 
     public static final String FT_TABLE_NAME = "foodTrucks";
@@ -207,10 +206,14 @@ public class DbHelper extends SQLiteOpenHelper {
         double latitude = location.getLatitude();
         double longitude = location.getLongitude();
 
-        double ulat = latitude + LAT_LONG_OFFSET;
-        double llat = latitude - LAT_LONG_OFFSET;
-        double ulong = longitude + LAT_LONG_OFFSET;
-        double llong = longitude - LAT_LONG_OFFSET;
+        double lat_offset = 0.05;
+        double long_offset = 0.05/Math.cos(latitude);
+
+
+        double ulat = latitude + lat_offset;
+        double llat = latitude - lat_offset;
+        double ulong = longitude + long_offset;
+        double llong = longitude - long_offset;
 
         ArrayList<FoodTruck> trucks = new ArrayList<>();
 

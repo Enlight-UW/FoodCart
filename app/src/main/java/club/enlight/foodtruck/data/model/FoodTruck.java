@@ -7,13 +7,13 @@ import java.util.ArrayList;
  */
 
 public class FoodTruck {
-    public final double id;                     // Unique ID number
+    public final long id;                     // Unique ID number
 
     private String name;                // Display Name
     private ArrayList<MenuItem> menu;
     private Schedule schedule;
-    private double Latitude;
-    private double Longitude;
+    private double latitude;
+    private double longitude;
     private boolean acceptsCreditCard;
 
     /**
@@ -26,6 +26,9 @@ public class FoodTruck {
         menu = new ArrayList<MenuItem>();
         schedule = new Schedule();
         acceptsCreditCard = false;
+        latitude = 0;
+        longitude = 0;
+
     }
 
     public FoodTruck(int id){
@@ -34,6 +37,8 @@ public class FoodTruck {
         menu = new ArrayList<MenuItem>();
         schedule = new Schedule();
         acceptsCreditCard = false;
+        latitude = 0;
+        longitude = 0;
     }
 
     // TODO: Implement setter and getter functions
@@ -68,19 +73,19 @@ public class FoodTruck {
     }
 
     public double getLatitude() {
-        return Latitude;
+        return latitude;
     }
 
     public void setLatitude(double latitude) {
-        Latitude = latitude;
+        latitude = latitude;
     }
 
     public double getLongitude() {
-        return Longitude;
+        return longitude;
     }
 
     public void setLongitude(double longitude) {
-        Longitude = longitude;
+        longitude = longitude;
     }
 
     // TODO: Implement comparable interface?
